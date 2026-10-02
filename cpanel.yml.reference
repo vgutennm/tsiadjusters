@@ -1,32 +1,33 @@
 ---
 deployment:
   tasks:
-    - /usr/bin/unzip -o cpanel-site.zip -d /home/aqzlml7cvg2l/public_html/
+    - /bin/mkdir -p /home/aqzlml7cvg2l/public_html
+    - /usr/bin/unzip -o /home/aqzlml7cvg2l/repositories/tsiadjusters/cpanel-site.zip -d /home/aqzlml7cvg2l/public_html/
     - /bin/mkdir -p /home/aqzlml7cvg2l/public_html/assets
-    - /bin/cp src/assets/collage/IMG_9772.jpg /home/aqzlml7cvg2l/public_html/assets/IMG_9772-B59HMzhU.jpg
-    - /bin/cp src/assets/collage/IMG_9773.jpg /home/aqzlml7cvg2l/public_html/assets/IMG_9773-BFNoMInH.jpg
-    - /bin/cp src/assets/collage/IMG_9774.jpg /home/aqzlml7cvg2l/public_html/assets/IMG_9774-D_trrcYR.jpg
-    - /bin/cp src/assets/collage/IMG_9775.jpg /home/aqzlml7cvg2l/public_html/assets/IMG_9775-BG0CKhJ8.jpg
-    - /bin/cp src/assets/collage/IMG_9776.jpg /home/aqzlml7cvg2l/public_html/assets/IMG_9776-Cu-7K4mr.jpg
-    - /bin/cp src/assets/collage/IMG_9778.jpg /home/aqzlml7cvg2l/public_html/assets/IMG_9778-S1rpXAlw.jpg
-    - /bin/cp src/assets/collage/IMG_9779.jpg /home/aqzlml7cvg2l/public_html/assets/IMG_9779-D1AESPCO.jpg
-    - /bin/cp src/assets/collage/IMG_9780.jpg /home/aqzlml7cvg2l/public_html/assets/IMG_9780-BOgUPrBn.jpg
-    - /bin/cp src/assets/collage/IMG_9781.jpg /home/aqzlml7cvg2l/public_html/assets/IMG_9781-DytTjB87.jpg
-    - /bin/cp src/assets/collage/IMG_9782.jpg /home/aqzlml7cvg2l/public_html/assets/IMG_9782-DrL2mcqD.jpg
-    - /bin/cp src/assets/collage/IMG_9783.jpg /home/aqzlml7cvg2l/public_html/assets/IMG_9783-CE-0g_ol.jpg
-    - /bin/cp src/assets/collage/IMG_9785.jpg /home/aqzlml7cvg2l/public_html/assets/IMG_9785-CUXZLF9i.jpg
-    - /bin/cp src/assets/collage/IMG_9786.jpg /home/aqzlml7cvg2l/public_html/assets/IMG_9786-xAJWr9kf.jpg
-    - /bin/cp src/assets/christina-tatum-v2.png /home/aqzlml7cvg2l/public_html/assets/christina-tatum-v2-Cz-Rygvs.png
-    - /bin/cp src/assets/emilie-wilbanks-light.png /home/aqzlml7cvg2l/public_html/assets/emilie-wilbanks-light-CLuowMCN.png
-    - /bin/cp src/assets/hero-earth.jpg /home/aqzlml7cvg2l/public_html/assets/hero-earth-B3VvVcn4.jpg
-    - /bin/cp src/assets/collage/image-47.png /home/aqzlml7cvg2l/public_html/assets/image-47-DiasX0hi.png
-    - /bin/cp src/assets/collage/image-50.png /home/aqzlml7cvg2l/public_html/assets/image-50-MU5R8xH2.png
-    - /bin/cp src/assets/collage/image-53.png /home/aqzlml7cvg2l/public_html/assets/image-53-B1zCgdJo.png
-    - /bin/cp src/assets/kaitlyn-headshot.jpg /home/aqzlml7cvg2l/public_html/assets/kaitlyn-headshot-C773KyGX.jpg
-    - /bin/cp src/assets/kendall-farris-v2.png /home/aqzlml7cvg2l/public_html/assets/kendall-farris-v2-CUFbCl72.png
-    - /bin/cp src/assets/nicole-farris-v2.png /home/aqzlml7cvg2l/public_html/assets/nicole-farris-v2-BcGgal0s.png
-    - /bin/cp src/assets/team-cheryl.jpg /home/aqzlml7cvg2l/public_html/assets/team-cheryl-C3PvDqEM.jpg
-    - /bin/cp src/assets/team-collage-15.png /home/aqzlml7cvg2l/public_html/assets/team-collage-15-CJDn2J4W.png
-    - /bin/cp src/assets/team-heather.jpg /home/aqzlml7cvg2l/public_html/assets/team-heather-CLAywSmE.jpg
-    - /bin/cp src/assets/team-jo.jpg /home/aqzlml7cvg2l/public_html/assets/team-jo-DmCvhRLs.jpg
-    - /bin/cp src/assets/tsi-mark.png /home/aqzlml7cvg2l/public_html/assets/tsi-mark-wQ8Dtzel.png
+    - /bin/cp /home/aqzlml7cvg2l/repositories/tsiadjusters/src/assets/collage/IMG_9772.jpg /home/aqzlml7cvg2l/public_html/assets/IMG_9772-B59HMzhU.jpg
+    - /bin/cp /home/aqzlml7cvg2l/repositories/tsiadjusters/src/assets/collage/IMG_9773.jpg /home/aqzlml7cvg2l/public_html/assets/IMG_9773-BFNoMInH.jpg
+    - /bin/cp /home/aqzlml7cvg2l/repositories/tsiadjusters/src/assets/collage/IMG_9774.jpg /home/aqzlml7cvg2l/public_html/assets/IMG_9774-D_trrcYR.jpg
+    - /bin/cp /home/aqzlml7cvg2l/repositories/tsiadjusters/src/assets/collage/IMG_9775.jpg /home/aqzlml7cvg2l/public_html/assets/IMG_9775-BG0CKhJ8.jpg
+    - /bin/cp /home/aqzlml7cvg2l/repositories/tsiadjusters/src/assets/collage/IMG_9776.jpg /home/aqzlml7cvg2l/public_html/assets/IMG_9776-Cu-7K4mr.jpg
+    - /bin/cp /home/aqzlml7cvg2l/repositories/tsiadjusters/src/assets/collage/IMG_9778.jpg /home/aqzlml7cvg2l/public_html/assets/IMG_9778-S1rpXAlw.jpg
+    - /bin/cp /home/aqzlml7cvg2l/repositories/tsiadjusters/src/assets/collage/IMG_9779.jpg /home/aqzlml7cvg2l/public_html/assets/IMG_9779-D1AESPCO.jpg
+    - /bin/cp /home/aqzlml7cvg2l/repositories/tsiadjusters/src/assets/collage/IMG_9780.jpg /home/aqzlml7cvg2l/public_html/assets/IMG_9780-BOgUPrBn.jpg
+    - /bin/cp /home/aqzlml7cvg2l/repositories/tsiadjusters/src/assets/collage/IMG_9781.jpg /home/aqzlml7cvg2l/public_html/assets/IMG_9781-DytTjB87.jpg
+    - /bin/cp /home/aqzlml7cvg2l/repositories/tsiadjusters/src/assets/collage/IMG_9782.jpg /home/aqzlml7cvg2l/public_html/assets/IMG_9782-DrL2mcqD.jpg
+    - /bin/cp /home/aqzlml7cvg2l/repositories/tsiadjusters/src/assets/collage/IMG_9783.jpg /home/aqzlml7cvg2l/public_html/assets/IMG_9783-CE-0g_ol.jpg
+    - /bin/cp /home/aqzlml7cvg2l/repositories/tsiadjusters/src/assets/collage/IMG_9785.jpg /home/aqzlml7cvg2l/public_html/assets/IMG_9785-CUXZLF9i.jpg
+    - /bin/cp /home/aqzlml7cvg2l/repositories/tsiadjusters/src/assets/collage/IMG_9786.jpg /home/aqzlml7cvg2l/public_html/assets/IMG_9786-xAJWr9kf.jpg
+    - /bin/cp /home/aqzlml7cvg2l/repositories/tsiadjusters/src/assets/christina-tatum-v2.png /home/aqzlml7cvg2l/public_html/assets/christina-tatum-v2-Cz-Rygvs.png
+    - /bin/cp /home/aqzlml7cvg2l/repositories/tsiadjusters/src/assets/emilie-wilbanks-light.png /home/aqzlml7cvg2l/public_html/assets/emilie-wilbanks-light-CLuowMCN.png
+    - /bin/cp /home/aqzlml7cvg2l/repositories/tsiadjusters/src/assets/hero-earth.jpg /home/aqzlml7cvg2l/public_html/assets/hero-earth-B3VvVcn4.jpg
+    - /bin/cp /home/aqzlml7cvg2l/repositories/tsiadjusters/src/assets/collage/image-47.png /home/aqzlml7cvg2l/public_html/assets/image-47-DiasX0hi.png
+    - /bin/cp /home/aqzlml7cvg2l/repositories/tsiadjusters/src/assets/collage/image-50.png /home/aqzlml7cvg2l/public_html/assets/image-50-MU5R8xH2.png
+    - /bin/cp /home/aqzlml7cvg2l/repositories/tsiadjusters/src/assets/collage/image-53.png /home/aqzlml7cvg2l/public_html/assets/image-53-B1zCgdJo.png
+    - /bin/cp /home/aqzlml7cvg2l/repositories/tsiadjusters/src/assets/kaitlyn-headshot.jpg /home/aqzlml7cvg2l/public_html/assets/kaitlyn-headshot-C773KyGX.jpg
+    - /bin/cp /home/aqzlml7cvg2l/repositories/tsiadjusters/src/assets/kendall-farris-v2.png /home/aqzlml7cvg2l/public_html/assets/kendall-farris-v2-CUFbCl72.png
+    - /bin/cp /home/aqzlml7cvg2l/repositories/tsiadjusters/src/assets/nicole-farris-v2.png /home/aqzlml7cvg2l/public_html/assets/nicole-farris-v2-BcGgal0s.png
+    - /bin/cp /home/aqzlml7cvg2l/repositories/tsiadjusters/src/assets/team-cheryl.jpg /home/aqzlml7cvg2l/public_html/assets/team-cheryl-C3PvDqEM.jpg
+    - /bin/cp /home/aqzlml7cvg2l/repositories/tsiadjusters/src/assets/team-collage-15.png /home/aqzlml7cvg2l/public_html/assets/team-collage-15-CJDn2J4W.png
+    - /bin/cp /home/aqzlml7cvg2l/repositories/tsiadjusters/src/assets/team-heather.jpg /home/aqzlml7cvg2l/public_html/assets/team-heather-CLAywSmE.jpg
+    - /bin/cp /home/aqzlml7cvg2l/repositories/tsiadjusters/src/assets/team-jo.jpg /home/aqzlml7cvg2l/public_html/assets/team-jo-DmCvhRLs.jpg
+    - /bin/cp /home/aqzlml7cvg2l/repositories/tsiadjusters/src/assets/tsi-mark.png /home/aqzlml7cvg2l/public_html/assets/tsi-mark-wQ8Dtzel.png
