@@ -102,10 +102,11 @@
     -webkit-font-smoothing: antialiased;
     font-feature-settings: "ss01", "cv11";
     overflow-x: hidden;
+    overflow-wrap: anywhere;
   }
   h1, h2, h3, h4 {
     font-family: var(--font-display);
-    letter-spacing: -0.02em;
+    letter-spacing: 0;
     color: var(--color-navy);
   }
 }
@@ -115,7 +116,10 @@
     margin-inline: auto;
     width: 100%;
     max-width: 80rem;
-    padding-inline: 1.5rem;
+    padding-inline: 1rem;
+  }
+  @media (min-width: 640px) {
+    .container-tsi { padding-inline: 1.5rem; }
   }
   @media (min-width: 1024px) {
     .container-tsi { padding-inline: 3rem; }
@@ -132,6 +136,8 @@
     letter-spacing: 0.01em;
     border-radius: 9999px;
     box-shadow: var(--shadow-soft);
+    min-width: 0;
+    text-align: center;
   }
 
   .btn-outline {
@@ -143,6 +149,8 @@
     font-weight: 500;
     font-size: 0.9375rem;
     border-radius: 9999px;
+    min-width: 0;
+    text-align: center;
   }
 
   .eyebrow {

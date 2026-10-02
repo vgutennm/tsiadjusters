@@ -25,7 +25,7 @@ export function Header() {
     <header className={isHome ? "absolute top-0 left-0 right-0 z-50" : "sticky top-0 z-50 bg-navy"}>
       {/* Top contact bar — visible on all screens */}
       <div className="bg-navy text-navy-foreground">
-        <div className="container-tsi flex items-center justify-end gap-4 h-10">
+        <div className="container-tsi flex h-10 items-center justify-center gap-3 sm:justify-end sm:gap-4">
           <a
             href="tel:8138390074"
             className="inline-flex items-center gap-1.5 text-xs font-medium"
@@ -52,12 +52,12 @@ export function Header() {
 
       {/* Main nav */}
       <div className="bg-navy border-b border-navy-foreground/10">
-        <div className="container-tsi flex items-center justify-between h-24 md:h-28 lg:h-32">
-          <Link to="/" className="flex items-center gap-3" aria-label="TSI Adjusters home">
-            <img src={tsiMark.url} alt="" className="w-14 h-14 md:w-16 md:h-16 shrink-0 object-contain brightness-0 invert" />
-            <div className="leading-none text-center">
-              <div className="text-xl md:text-2xl lg:text-3xl font-bold tracking-wide text-navy-foreground">TSI ADJUSTERS</div>
-              <div className="mt-1 text-[10px] md:text-xs font-semibold uppercase tracking-[0.2em] text-gold">Trust Service Integrity</div>
+        <div className="container-tsi grid h-20 grid-cols-[minmax(0,1fr)_auto] items-center gap-2 md:flex md:h-28 md:justify-between lg:h-32">
+          <Link to="/" className="flex min-w-0 items-center gap-2 sm:gap-3" aria-label="TSI Adjusters home">
+            <img src={tsiMark} alt="" className="h-11 w-11 shrink-0 object-contain brightness-0 invert sm:h-14 sm:w-14 md:h-16 md:w-16" />
+            <div className="min-w-0 text-center leading-none">
+              <div className="truncate text-base font-bold text-navy-foreground sm:text-xl md:text-2xl lg:text-3xl">TSI ADJUSTERS</div>
+              <div className="mt-1 truncate text-[8px] font-semibold uppercase text-gold sm:text-[10px] md:text-xs">Trust Service Integrity</div>
             </div>
           </Link>
 
@@ -78,7 +78,7 @@ export function Header() {
 
 
           <button
-            className="md:hidden p-2 text-navy-foreground"
+            className="shrink-0 p-2 text-navy-foreground md:hidden"
             onClick={() => setOpen((v) => !v)}
             aria-label="Toggle menu"
           >

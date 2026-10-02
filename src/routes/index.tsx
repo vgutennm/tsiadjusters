@@ -10,6 +10,8 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "Independent insurance adjuster firm delivering exceptional claims handling nationwide since 2006." },
       { property: "og:title", content: "TSI Adjusters — Trust. Service. Integrity." },
       { property: "og:description", content: "Independent insurance adjuster firm delivering exceptional claims handling nationwide since 2006." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Home,
@@ -29,29 +31,29 @@ function Home() {
           height={1080}
         />
         <div className="absolute inset-0" style={{ background: "linear-gradient(180deg, oklch(0.10 0.05 265 / 0.55), oklch(0.10 0.05 265 / 0.85))" }} />
-        <div className="relative container-tsi pt-56 md:pt-64 lg:pt-72 pb-24 md:pb-32 lg:pb-36 text-navy-foreground">
-          <h1 className="max-w-3xl text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] text-navy-foreground">
+        <div className="relative container-tsi pt-48 pb-16 text-navy-foreground sm:pt-52 sm:pb-20 md:pt-64 md:pb-28 lg:pt-72 lg:pb-36">
+          <h1 className="max-w-3xl text-4xl font-bold leading-[1.08] text-navy-foreground sm:text-5xl md:text-6xl lg:text-7xl">
             Boutique precision. <span className="text-gold italic">Enterprise capacity.</span>
           </h1>
-          <p className="mt-6 max-w-2xl text-lg text-navy-foreground/85 leading-relaxed">
+          <p className="mt-5 max-w-2xl text-base text-navy-foreground/85 leading-relaxed sm:mt-6 sm:text-lg">
             Full-service, independent, nationwide. Serving insurance carriers of all sizes with <span className="font-bold">T</span>rust, <span className="font-bold">S</span>ervice, and <span className="font-bold">I</span>ntegrity since 2006.
           </p>
-          <div className="mt-10 flex flex-wrap gap-4">
+          <div className="mt-8 flex flex-col items-stretch gap-3 min-[420px]:flex-row min-[420px]:items-center sm:mt-10 sm:gap-4">
             <Link to="/contact" className="btn-primary">
               Talk to TSI <ArrowRight className="w-4 h-4" />
             </Link>
             <a href="mailto:hr@tsiadjusters.com?subject=Interested%20in%20joining%20the%20TSI%20roster" className="btn-outline">Join Our Roster</a>
           </div>
 
-          <div className="mt-14 grid grid-cols-3 gap-8 max-w-xl border-t border-navy-foreground/15 pt-10">
+          <div className="mt-10 grid max-w-xl grid-cols-3 gap-3 border-t border-navy-foreground/15 pt-7 sm:mt-14 sm:gap-8 sm:pt-10">
             {[
               ["20+", "YEARS"],
               ["95%+", "QA Score"],
               ["99%", "Customer Satisfaction"],
             ].map(([num, label]) => (
               <div key={label}>
-                <div className="font-display text-4xl font-semibold text-gold">{num}</div>
-                <div className="mt-1 text-sm text-navy-foreground/70">{label}</div>
+                <div className="font-display text-3xl font-semibold text-gold sm:text-4xl">{num}</div>
+                <div className="mt-1 text-xs leading-snug text-navy-foreground/70 sm:text-sm">{label}</div>
               </div>
             ))}
           </div>
@@ -80,7 +82,7 @@ function Home() {
       <section className="container-tsi pt-12 pb-6 md:pt-16 md:pb-8">
         <div className="max-w-2xl">
           <span className="eyebrow">How we work</span>
-          <h2 className="mt-3 text-3xl md:text-4xl font-bold whitespace-nowrap">A streamlined process, built for our partners.</h2>
+          <h2 className="mt-3 text-3xl font-bold leading-tight md:text-4xl">A streamlined process, built for our partners.</h2>
           <p className="mt-4 text-base text-muted-foreground leading-relaxed">
             From first notice of loss to final delivery, fast, accurate, and always on time.
           </p>
