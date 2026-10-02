@@ -8,6 +8,8 @@ export const Route = createFileRoute("/contact")({
       { name: "description", content: "Reach the TSI Adjusters team 24/7 for urgent claims response. Call (813) 839-0074 or email inquiries@tsiadjusters.com." },
       { property: "og:title", content: "Contact — TSI Adjusters" },
       { property: "og:description", content: "Always in reach. 24/7 urgent response team." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Contact,
@@ -20,34 +22,34 @@ function Contact() {
       <section className="container-tsi pt-10 pb-6">
         <div className="max-w-3xl mx-auto text-center">
           <span className="eyebrow">Send us a message</span>
-          <h2 className="mt-3 text-4xl md:text-5xl lg:text-6xl font-bold">We make the claims process easier.</h2>
+          <h2 className="mt-3 text-3xl font-bold leading-tight sm:text-4xl md:text-5xl lg:text-6xl">We make the claims process easier.</h2>
         </div>
-        <div className="mt-8 max-w-2xl mx-auto rounded-2xl bg-card border border-border p-6">
+        <div className="mt-8 max-w-2xl mx-auto rounded-2xl bg-card border border-border p-4 sm:p-6">
           <div className="grid gap-4 sm:grid-cols-2">
             <a href="mailto:inquiries@tsiadjusters.com" className="flex items-start gap-3 group">
               <Mail className="w-5 h-5 text-gold shrink-0 mt-0.5" />
-              <div>
+              <div className="min-w-0">
                 <span className="block text-sm font-semibold text-navy">General inquiries</span>
-                <span className="text-sm text-muted-foreground">inquiries@tsiadjusters.com</span>
+                <span className="block break-all text-sm text-muted-foreground">inquiries@tsiadjusters.com</span>
               </div>
             </a>
             <a href="mailto:assignments@tsiadjusters.com" className="flex items-start gap-3 group">
               <Mail className="w-5 h-5 text-gold shrink-0 mt-0.5" />
-              <div>
+              <div className="min-w-0">
                 <span className="block text-sm font-semibold text-navy">Claims inquiries</span>
-                <span className="text-sm text-muted-foreground">assignments@tsiadjusters.com</span>
+                <span className="block break-all text-sm text-muted-foreground">assignments@tsiadjusters.com</span>
               </div>
             </a>
             <a href="mailto:hr@tsiadjusters.com?subject=Interested in joining the TSI roster" className="flex items-start gap-3 group">
               <Users className="w-5 h-5 text-gold shrink-0 mt-0.5" />
-              <div>
+              <div className="min-w-0">
                 <span className="block text-sm font-semibold text-navy">Join our roster</span>
-                <span className="text-sm text-muted-foreground">hr@tsiadjusters.com</span>
+                <span className="block break-all text-sm text-muted-foreground">hr@tsiadjusters.com</span>
               </div>
             </a>
             <a href="tel:8138390074" className="flex items-start gap-3 group">
               <Phone className="w-5 h-5 text-gold shrink-0 mt-0.5" />
-              <div>
+              <div className="min-w-0">
                 <span className="block text-sm font-semibold text-navy">Urgent needs</span>
                 <span className="text-sm text-muted-foreground">(813) 839-0074</span>
               </div>

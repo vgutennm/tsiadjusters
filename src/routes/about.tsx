@@ -39,6 +39,8 @@ export const Route = createFileRoute("/about")({
       { name: "description", content: "How TSI Adjusters began in 2006, what Trust, Service, and Integrity mean to us, and the family behind the firm." },
       { property: "og:title", content: "About — TSI Adjusters" },
       { property: "og:description", content: "Our beginning, what we stand for, and the leadership behind TSI Adjusters." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: About,
@@ -58,7 +60,7 @@ const team = [
   {
     name: "Kaitlyn Aurigemma",
     role: "Finance Manager",
-    image: teamKaitlyn.url,
+    image: teamKaitlyn,
   },
   {
     name: "Cheryl Baker",
@@ -68,23 +70,23 @@ const team = [
   {
     name: "Nicole Farris",
     role: "Director of Client Relations & Business Development",
-    image: teamNicole.url,
+    image: teamNicole,
   },
   {
     name: "Emilie Wilbanks",
     role: "Director of Claims",
-    image: teamEmilie.url,
+    image: teamEmilie,
   },
   {
     name: "Kendall Farris",
     role: "Human Resources",
-    image: teamKendall.url,
+    image: teamKendall,
     position: "center 22%",
   },
   {
     name: "Christina Tatum",
     role: "Director of Quality Control",
-    image: teamChristina.url,
+    image: teamChristina,
     position: "center 22%",
   },
 ];
@@ -132,8 +134,8 @@ function About() {
           <div className="mt-4 grid md:grid-cols-2 gap-4 max-w-4xl">
             {team.map((m) => (
               <article key={m.name} className="rounded-xl bg-card border border-border overflow-hidden">
-                <div className="grid grid-cols-[5rem_1fr] gap-3 p-4">
-                  <div className="w-20 h-20 rounded-lg overflow-hidden bg-secondary">
+                <div className="grid grid-cols-[4.5rem_minmax(0,1fr)] gap-3 p-3 sm:grid-cols-[5rem_minmax(0,1fr)] sm:p-4">
+                  <div className="h-[4.5rem] w-[4.5rem] shrink-0 overflow-hidden rounded-lg bg-secondary sm:h-20 sm:w-20">
                     <img
                       src={m.image}
                       alt={`${m.name}, ${m.role}`}
@@ -155,15 +157,15 @@ function About() {
 
           {/* Your Claims Team collage */}
           <div className="mt-8 max-w-5xl">
-            <div className="rounded-2xl border border-border bg-card/50 p-6 md:p-8">
+            <div className="rounded-2xl border border-border bg-card/50 p-3 sm:p-6 md:p-8">
               <span className="eyebrow">Your Claims Team</span>
               <h3 className="mt-3 font-display text-2xl md:text-3xl font-bold">The people behind every claim</h3>
-              <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-3 [grid-auto-flow:dense]">
+              <div className="mt-5 grid grid-cols-2 gap-2 [grid-auto-flow:dense] sm:gap-3 md:grid-cols-4">
                 {/* Centerpiece — center of the collage, larger than the rest */}
                 <div className="col-span-2 row-span-2 md:col-start-2 md:row-start-2 rounded-2xl overflow-hidden bg-navy p-2 shadow-xl">
                   <div className="h-full w-full rounded-xl overflow-hidden border-2 border-gold">
                     <img
-                      src={centerpiece.url}
+                      src={centerpiece}
                       alt="TSI Adjusters leadership team"
                       className="h-full w-full object-cover"
                       loading="lazy"
