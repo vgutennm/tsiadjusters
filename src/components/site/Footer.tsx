@@ -41,6 +41,30 @@ export function Footer() {
           </span>
         </div>
       </div>
+
+      <div className="border-t border-navy-foreground/10">
+        <div className="container-tsi py-2.5 text-center">
+          <p className="text-navy-foreground/80 text-xs sm:text-[13px] leading-relaxed">
+            Put AI to work. Create capacity. Grow what matters.{" "}
+            <a
+              href="https://setupshoponline.com/free-business-strategy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gold font-semibold hover:text-gold/80 transition-colors whitespace-nowrap"
+            >
+              FREE Strategy
+            </a>{" "}
+            <a
+              href="https://setupshoponline.com/free-business-strategy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gold transition-colors whitespace-nowrap"
+            >
+              www.setupshoponline.com
+            </a>
+          </p>
+        </div>
+      </div>
     </footer>
   );
 }
