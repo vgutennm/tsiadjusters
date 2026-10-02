@@ -181,7 +181,7 @@ function About() {
                       className="aspect-square rounded-lg overflow-hidden bg-secondary"
                     >
                       <img
-                        src={img.url}
+                        src={img}
                         alt="TSI Adjusters team"
                         className={`h-full w-full object-cover ${isTall ? "object-center" : "object-top"}`}
                         loading="lazy"
