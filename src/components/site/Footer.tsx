@@ -35,6 +35,10 @@ export function Footer() {
         <div className="container-tsi py-2.5 text-[11px] text-navy-foreground/60 flex flex-wrap items-center justify-center sm:justify-between gap-2">
           <span>© {new Date().getFullYear()} TSI Adjusters. All rights reserved.</span>
           <span>Nationwide coverage · Licensed in all 50 states</span>
+          <span className="flex gap-3">
+            <Link to="/privacy-policy" className="hover:text-gold">Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-gold">Terms of Service</Link>
+          </span>
         </div>
       </div>
     </footer>

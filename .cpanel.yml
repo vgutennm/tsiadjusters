@@ -17,15 +17,15 @@ deployment:
     - /bin/cp src/assets/collage/IMG_9786.jpg /home/aqzlml7cvg2l/public_html/assets/IMG_9786-xAJWr9kf.jpg
     - /bin/cp src/assets/christina-tatum-v2.png /home/aqzlml7cvg2l/public_html/assets/christina-tatum-v2-Cz-Rygvs.png
     - /bin/cp src/assets/emilie-wilbanks-light.png /home/aqzlml7cvg2l/public_html/assets/emilie-wilbanks-light-CLuowMCN.png
-    - /bin/cp src/assets/hero-earth.jpg /home/aqzlml7cvg2l/public_html/assets/hero-earth-g-zP_1n0.jpg
+    - /bin/cp src/assets/hero-earth.jpg /home/aqzlml7cvg2l/public_html/assets/hero-earth-B3VvVcn4.jpg
     - /bin/cp src/assets/collage/image-47.png /home/aqzlml7cvg2l/public_html/assets/image-47-DiasX0hi.png
     - /bin/cp src/assets/collage/image-50.png /home/aqzlml7cvg2l/public_html/assets/image-50-MU5R8xH2.png
-    - /bin/cp src/assets/collage/image-53.png /home/aqzlml7cvg2l/public_html/assets/image-53-B1zCgdJo.png
-    - /bin/cp src/assets/kaitlyn-headshot.jpg /home/aqzlml7cvg2l/public_html/assets/kaitlyn-headshot-B8WkqKcK.jpg
+    - /bin/cp src/assets/collage/image-52.png /home/aqzlml7cvg2l/public_html/assets/image-53-B1zCgdJo.png
+    - /bin/cp src/assets/kaitlyn-headshot.jpg /home/aqzlml7cvg2l/public_html/assets/kaitlyn-headshot-C773KyGX.jpg
     - /bin/cp src/assets/kendall-farris-v2.png /home/aqzlml7cvg2l/public_html/assets/kendall-farris-v2-CUFbCl72.png
     - /bin/cp src/assets/nicole-farris-v2.png /home/aqzlml7cvg2l/public_html/assets/nicole-farris-v2-BcGgal0s.png
-    - /bin/cp src/assets/team-cheryl.jpg /home/aqzlml7cvg2l/public_html/assets/team-cheryl-Gai1k6YC.jpg
+    - /bin/cp src/assets/team-cheryl.jpg /home/aqzlml7cvg2l/public_html/assets/team-cheryl-C3PvDqEM.jpg
     - /bin/cp src/assets/team-collage-15.png /home/aqzlml7cvg2l/public_html/assets/team-collage-15-CJDn2J4W.png
     - /bin/cp src/assets/team-heather.jpg /home/aqzlml7cvg2l/public_html/assets/team-heather-CLAywSmE.jpg
-    - /bin/cp src/assets/team-jo.jpg /home/aqzlml7cvg2l/public_html/assets/team-jo-CWAX_p8h.jpg
+    - /bin/cp src/assets/team-jo.jpg /home/aqzlml7cvg2l/public_html/assets/team-jo-DmCvhRLs.jpg
     - /bin/cp src/assets/tsi-mark.png /home/aqzlml7cvg2l/public_html/assets/tsi-mark-wQ8Dtzel.png
