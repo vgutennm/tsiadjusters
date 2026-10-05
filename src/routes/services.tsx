@@ -49,7 +49,7 @@ function Services() {
               <span className="eyebrow">Full capabilities</span>
               <h2 className="mt-3 text-3xl md:text-4xl font-bold text-navy-foreground">Our services</h2>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-3 max-w-3xl">
+            <div className="grid grid-cols-1 gap-x-8 gap-y-3 sm:grid-cols-2 lg:grid-cols-4">
               {services.map((s) => (
                 <div key={s} className="flex min-w-0 items-center gap-3">
                   <span className="h-2 w-2 shrink-0 rounded-full bg-gold" aria-hidden="true" />
