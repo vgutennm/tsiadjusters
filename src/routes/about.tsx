@@ -1,12 +1,11 @@
 import { createFileRoute } from "@tanstack/react-router";
-import teamJo from "@/assets/team-jo.jpg";
-import teamHeather from "@/assets/team-heather.jpg";
-import teamCheryl from "@/assets/team-cheryl.jpg";
-import teamNicole from "@/assets/nicole-farris-v2.png";
-import teamKendall from "@/assets/kendall-farris-v2.png";
-import teamKaitlyn from "@/assets/kaitlyn-headshot.jpg";
-import teamChristina from "@/assets/christina-tatum-v2.png";
-import teamEmilie from "@/assets/emilie-wilbanks-light.png";
+import teamJo from "@/assets/thumbs/team-jo.jpg";
+import teamHeather from "@/assets/thumbs/team-heather.jpg";
+import teamCheryl from "@/assets/thumbs/team-cheryl.jpg";
+import teamNicole from "@/assets/thumbs/nicole-farris-v2.jpg";
+import teamKendall from "@/assets/thumbs/kendall-farris-v2.jpg";
+import teamKaitlyn from "@/assets/thumbs/kaitlyn-headshot.jpg";
+import teamEmilie from "@/assets/thumbs/emilie-wilbanks-light.jpg";
 import teamPlaceholder from "@/assets/team-placeholder.jpg";
 import collage1 from "@/assets/collage/IMG_9772.jpg";
 import collage2 from "@/assets/collage/IMG_9773.jpg";
@@ -81,13 +80,6 @@ const team = [
     name: "Kendall Farris",
     role: "Human Resources",
     image: teamKendall,
-    position: "center 22%",
-  },
-  {
-    name: "Christina Tatum",
-    role: "Director of Quality Control",
-    image: teamChristina,
-    position: "center 22%",
   },
 ];
 
@@ -132,8 +124,8 @@ function About() {
           </div>
 
           <div className="mt-4 grid md:grid-cols-2 gap-4 max-w-4xl">
-            {team.map((m) => (
-              <article key={m.name} className="rounded-xl bg-card border border-border overflow-hidden">
+            {team.map((m, i) => (
+              <article key={m.name} className={`rounded-xl bg-card border border-border overflow-hidden${team.length % 2 === 1 && i === team.length - 1 ? " md:col-span-2 md:mx-auto md:w-full md:max-w-[calc(50%-0.5rem)]" : ""}`}>
                 <div className="grid grid-cols-[4.5rem_minmax(0,1fr)] gap-3 p-3 sm:grid-cols-[5rem_minmax(0,1fr)] sm:p-4">
                   <div className="h-[4.5rem] w-[4.5rem] shrink-0 overflow-hidden rounded-lg bg-secondary sm:h-20 sm:w-20">
                     <img
@@ -142,8 +134,8 @@ function About() {
                       className="w-full h-full object-cover object-top"
                       style={(m as { position?: string }).position ? { objectPosition: (m as { position?: string }).position } : undefined}
                       loading="lazy"
-                      width={448}
-                      height={576}
+                      width={320}
+                      height={320}
                     />
                   </div>
                   <div className="min-w-0 flex flex-col justify-center">
