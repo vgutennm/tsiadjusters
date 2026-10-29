@@ -1,0 +1,8 @@
+version: 2
+updates:
+  - package-ecosystem: "bun"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    # Keep routine version PRs off; security updates are handled separately.
+    open-pull-requests-limit: 0
