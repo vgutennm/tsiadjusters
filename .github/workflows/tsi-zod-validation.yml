@@ -45,3 +45,76 @@ jobs:
             pnpm-workspace.yaml
             pnpm-lock.yaml
             dist/client
+  source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: 25c6bbb880c296b61f2454dd4f5145bf752f0248
+          persist-credentials: false
+      - uses: oven-sh/setup-bun@v2
+      - name: Update source dependency and transitive constraint
+        run: |
+          bun -e "const p=await Bun.file('package.json').json();p.dependencies.zod='4.6.6';p.overrides={...p.overrides,zod:'4.6.6'};await Bun.write('package.json',JSON.stringify(p,null,2)+'\n')"
+          bun install
+          bun pm ls --all
+      - name: Build Lovable source
+        run: bun run build
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: tsi-zod-source
+          retention-days: 30
+          path: |
+            package.json
+            bun.lock
+  recovery:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: maintenance-recovery-test
+          persist-credentials: false
+      - name: Restore and serve recovered public website in isolation
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import zipfile,hashlib,http.server,threading,urllib.request,json,functools,re
+          archive=Path('recovery-site-2026-10-28.zip')
+          root=Path('/tmp/tsi-restored-public-site')
+          root.mkdir()
+          with zipfile.ZipFile(archive) as z:
+              assert z.testzip() is None
+              for member in z.infolist():
+                  assert not member.filename.startswith('/') and '..' not in Path(member.filename).parts
+              z.extractall(root)
+              for member in z.infolist():
+                  assert (root/member.filename).read_bytes()==z.read(member)
+          handler=functools.partial(http.server.SimpleHTTPRequestHandler,directory=str(root))
+          server=http.server.ThreadingHTTPServer(('127.0.0.1',0),handler)
+          threading.Thread(target=server.serve_forever,daemon=True).start()
+          base='http://127.0.0.1:'+str(server.server_port)
+          results=[]
+          for path in ['/','/about/','/services/','/contact/','/privacy-policy/','/terms/']:
+              with urllib.request.urlopen(base+path) as r:
+                  data=r.read()
+                  assert r.status==200 and b'<html' in data.lower()
+                  assert data==(root/path.lstrip('/')/'index.html').read_bytes()
+                  results.append({'page':path,'status':r.status,'bytes':len(data)})
+          for p in root.rglob('*'):
+              if p.is_file():
+                  with urllib.request.urlopen(base+'/'+str(p.relative_to(root))) as r:
+                      assert r.status==200 and r.read()==p.read_bytes()
+          server.shutdown()
+          report={'result':'PASS','scope':'Recovered public website files, isolated HTTP serving; not a full hosting account restore','archive_sha256':hashlib.sha256(archive.read_bytes()).hexdigest(),'files_verified':sum(p.is_file() for p in root.rglob('*')),'pages':results}
+          Path('recovery-evidence.json').write_text(json.dumps(report,indent=2))
+          print(json.dumps(report,indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: tsi-recovery-evidence
+          retention-days: 90
+          path: recovery-evidence.json
+
