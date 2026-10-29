@@ -15,6 +15,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Preserve current production footer from Lovable source
+        run: |
+          git fetch --depth=1 origin 25c6bbb880c296b61f2454dd4f5145bf752f0248
+          git show FETCH_HEAD:src/components/site/Footer.tsx > src/components/site/Footer.tsx
       - name: Prepare candidate dependency update
         run: |
           npm install --global pnpm@10
@@ -45,6 +49,7 @@ jobs:
             pnpm-workspace.yaml
             pnpm-lock.yaml
             dist/client
+            src/components/site/Footer.tsx
   source:
     runs-on: ubuntu-latest
     timeout-minutes: 20
